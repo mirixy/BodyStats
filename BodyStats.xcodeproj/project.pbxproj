@@ -11,6 +11,11 @@
 		EBB69B6D2B25A1E500173831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB69B6C2B25A1E500173831 /* ContentView.swift */; };
 		EBB69B6F2B25A1E600173831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB69B6E2B25A1E600173831 /* Assets.xcassets */; };
 		EBB69B722B25A1E600173831 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB69B712B25A1E600173831 /* Preview Assets.xcassets */; };
+		EBB69B7B2B25A45100173831 /* BodymassIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB69B7A2B25A45100173831 /* BodymassIndex.swift */; };
+		EBB69B822B25CB6100173831 /* BodyFatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB69B812B25CB6100173831 /* BodyFatView.swift */; };
+		EBB69B852B25F79700173831 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB69B842B25F79700173831 /* TabBarView.swift */; };
+		EBB69B872B25F7AD00173831 /* BMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB69B862B25F7AD00173831 /* BMIView.swift */; };
+		EBB69B892B25FABE00173831 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB69B882B25FABE00173831 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		EBB69B6C2B25A1E500173831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBB69B6E2B25A1E600173831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB69B712B25A1E600173831 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EBB69B7A2B25A45100173831 /* BodymassIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodymassIndex.swift; sourceTree = "<group>"; };
+		EBB69B812B25CB6100173831 /* BodyFatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyFatView.swift; sourceTree = "<group>"; };
+		EBB69B842B25F79700173831 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		EBB69B862B25F7AD00173831 /* BMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIView.swift; sourceTree = "<group>"; };
+		EBB69B882B25FABE00173831 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				EBB69B6A2B25A1E500173831 /* BodyStatsApp.swift */,
-				EBB69B6C2B25A1E500173831 /* ContentView.swift */,
+				EBB69B792B25A41500173831 /* Engine */,
+				EBB69B7C2B25A45C00173831 /* Text */,
+				EBB69B782B25A3F300173831 /* Views */,
 				EBB69B6E2B25A1E600173831 /* Assets.xcassets */,
 				EBB69B702B25A1E600173831 /* Preview Content */,
 			);
@@ -65,6 +77,33 @@
 				EBB69B712B25A1E600173831 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EBB69B782B25A3F300173831 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBB69B6C2B25A1E500173831 /* ContentView.swift */,
+				EBB69B812B25CB6100173831 /* BodyFatView.swift */,
+				EBB69B862B25F7AD00173831 /* BMIView.swift */,
+				EBB69B882B25FABE00173831 /* HomeView.swift */,
+				EBB69B842B25F79700173831 /* TabBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EBB69B792B25A41500173831 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				EBB69B7A2B25A45100173831 /* BodymassIndex.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		EBB69B7C2B25A45C00173831 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Text;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB69B822B25CB6100173831 /* BodyFatView.swift in Sources */,
+				EBB69B892B25FABE00173831 /* HomeView.swift in Sources */,
 				EBB69B6D2B25A1E500173831 /* ContentView.swift in Sources */,
+				EBB69B7B2B25A45100173831 /* BodymassIndex.swift in Sources */,
+				EBB69B872B25F7AD00173831 /* BMIView.swift in Sources */,
 				EBB69B6B2B25A1E500173831 /* BodyStatsApp.swift in Sources */,
+				EBB69B852B25F79700173831 /* TabBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +319,8 @@
 				DEVELOPMENT_TEAM = A2WHL9K3GA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Body Stats";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,7 +330,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = miriam.renken.BodyStats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -304,6 +350,8 @@
 				DEVELOPMENT_TEAM = A2WHL9K3GA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Body Stats";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -313,7 +361,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = miriam.renken.BodyStats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         ZStack{
-            LinearGradient(colors: [.mint, .white], startPoint: .topLeading, endPoint: .bottom).ignoresSafeArea()
-            
+            //LinearGradient(colors: [.mint, .white], startPoint: .topLeading, endPoint: .bottom).ignoresSafeArea()
             VStack{
-                
+                TabBarView()
             }
+            
             
         }
     }
+    
+    
 }
+
+
 
 #Preview {
     ContentView()

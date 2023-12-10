@@ -9,7 +9,31 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            LinearGradient(colors: [.yellow, .white], startPoint: .topLeading, endPoint: .bottom).ignoresSafeArea()
+            VStack{
+                Spacer()
+                Text("Your Stats")
+                    .font(.largeTitle)
+                    .foregroundColor(.gray)
+                Spacer()
+                VStack{
+                    HStack{
+                        Text("current BMI:")
+                        Text(String(BMI().bmi))
+                    }
+                    HStack{
+                        Text("current BF%:")
+                        Text(String(BF().bodyfat))
+                    }
+                    Spacer()
+                }
+            }
+            
+        }.foregroundColor(.black)
+            
+            
+        
     }
 }
 
