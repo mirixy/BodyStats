@@ -24,6 +24,7 @@ struct BodyFatView: View {
         
     }
     @State private var selectedGender: Gender = .Male
+    @State private var gender = ""
     
     var body: some View {
         ZStack{
@@ -138,7 +139,8 @@ struct BodyFatView: View {
         person.neck = neck
         person.waist = waist
         person.hip = hip
-        person.gender = selectedGender.rawValue
+        gender = (selectedGender.rawValue)
+        person.set_gender(gender: gender)
         calc()
     }
     func calc() {

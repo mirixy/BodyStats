@@ -30,8 +30,9 @@ class Person: ObservableObject {
     // set gender
     func set_gender(gender: String) {
         self.gender = gender
-        if self.gender == "Woman" {
-            self.isWomen = true
+        if self.gender == "Female" {
+            isWomen = true
+            print("Status Woman: ", isWomen)
         }
     }
     
@@ -75,7 +76,7 @@ class Person: ObservableObject {
         var firstLog = 0.0
         let secLog = log10(height!)
         var bf = 0.0
-        if isWomen {
+        if self.isWomen == true {
             firstLog = log10((waist! + hip!) - neck!)
             bf = (495 / (1.29579 - (0.35004 * firstLog) + (0.22100 * secLog)) - 450)
         } else{
@@ -83,6 +84,7 @@ class Person: ObservableObject {
             bf = (495 / (1.0324 - (0.19077 * firstLog) + (0.15456 * secLog)) - 450)
         }
         self.bodyfat = roundToPlaces(value: bf, places: 2)
+        print("Here: " , self.isWomen , bf)
         
         
     }
