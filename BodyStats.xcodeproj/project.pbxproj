@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB996B4F2B26F89A00A28C1C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB996B4E2B26F89A00A28C1C /* DataModel.swift */; };
 		EBB69B6B2B25A1E500173831 /* BodyStatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB69B6A2B25A1E500173831 /* BodyStatsApp.swift */; };
 		EBB69B6D2B25A1E500173831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB69B6C2B25A1E500173831 /* ContentView.swift */; };
 		EBB69B6F2B25A1E600173831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB69B6E2B25A1E600173831 /* Assets.xcassets */; };
 		EBB69B722B25A1E600173831 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB69B712B25A1E600173831 /* Preview Assets.xcassets */; };
-		EBB69B7B2B25A45100173831 /* BodymassIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB69B7A2B25A45100173831 /* BodymassIndex.swift */; };
 		EBB69B822B25CB6100173831 /* BodyFatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB69B812B25CB6100173831 /* BodyFatView.swift */; };
 		EBB69B852B25F79700173831 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB69B842B25F79700173831 /* TabBarView.swift */; };
 		EBB69B872B25F7AD00173831 /* BMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB69B862B25F7AD00173831 /* BMIView.swift */; };
@@ -19,12 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB996B4E2B26F89A00A28C1C /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		EBB69B672B25A1E500173831 /* BodyStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BodyStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB69B6A2B25A1E500173831 /* BodyStatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyStatsApp.swift; sourceTree = "<group>"; };
 		EBB69B6C2B25A1E500173831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBB69B6E2B25A1E600173831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB69B712B25A1E600173831 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EBB69B7A2B25A45100173831 /* BodymassIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodymassIndex.swift; sourceTree = "<group>"; };
 		EBB69B812B25CB6100173831 /* BodyFatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyFatView.swift; sourceTree = "<group>"; };
 		EBB69B842B25F79700173831 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		EBB69B862B25F7AD00173831 /* BMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIView.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		EBB69B792B25A41500173831 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				EBB69B7A2B25A45100173831 /* BodymassIndex.swift */,
+				EB996B4E2B26F89A00A28C1C /* DataModel.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -179,8 +179,8 @@
 				EBB69B822B25CB6100173831 /* BodyFatView.swift in Sources */,
 				EBB69B892B25FABE00173831 /* HomeView.swift in Sources */,
 				EBB69B6D2B25A1E500173831 /* ContentView.swift in Sources */,
-				EBB69B7B2B25A45100173831 /* BodymassIndex.swift in Sources */,
 				EBB69B872B25F7AD00173831 /* BMIView.swift in Sources */,
+				EB996B4F2B26F89A00A28C1C /* DataModel.swift in Sources */,
 				EBB69B6B2B25A1E500173831 /* BodyStatsApp.swift in Sources */,
 				EBB69B852B25F79700173831 /* TabBarView.swift in Sources */,
 			);

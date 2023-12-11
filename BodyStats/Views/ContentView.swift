@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @StateObject var person = Person()
     var body: some View {
         ZStack{
             //LinearGradient(colors: [.mint, .white], startPoint: .topLeading, endPoint: .bottom).ignoresSafeArea()
             VStack{
                 TabBarView()
+                    
             }
-            
-            
-        }
+        }.environmentObject(person)
     }
     
     
@@ -27,4 +26,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(Person())
 }

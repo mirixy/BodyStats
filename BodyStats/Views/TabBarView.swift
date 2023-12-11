@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TabBarView: View {
+    @StateObject var person = Person()
+    
     var body: some View {
         
             //LinearGradient(colors: [.mint, .white], startPoint: .topLeading, endPoint: .bottom).ignoresSafeArea()
@@ -16,7 +18,8 @@ struct TabBarView: View {
             HomeView().tabItem { Text("Home") }.tag(1)
             BMIView().tabItem { Text("BMI") }.tag(2)
             BodyFatView().tabItem {Text("BF%")}.tag(3)
-        }
+        }.environmentObject(person)
+            
 
      
     }
@@ -24,4 +27,5 @@ struct TabBarView: View {
 
 #Preview {
     TabBarView()
+        
 }

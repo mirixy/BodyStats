@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct BodyFatView: View {
-    @State var height = BF().height
-    @State var weight = BF().weight
-    @State var neck = BF().neck
-    @State var waist = BF().waist
-    @State var hip = BF().hip
-    @State var bodyfat = BF().bodyfat
+    @EnvironmentObject var person: Person
+    
+    @State var height = ""
+    @State var weight = ""
+    @State var neck = ""
+    @State var waist = ""
+    @State var hip = ""
+    
     
     enum Gender: String, CaseIterable, Identifiable {
         case Male, Female
@@ -21,7 +23,8 @@ struct BodyFatView: View {
         
         
     }
-    @State private var selectedGender: Gender = .Female
+    @State private var selectedGender: Gender = .Male
+    
     var body: some View {
         ZStack{
             LinearGradient(colors: [.orange, .white], startPoint: .topLeading, endPoint: .bottomLeading)
@@ -74,6 +77,7 @@ struct BodyFatView: View {
                         Spacer()
                     }
                     
+                    
                     if selectedGender.rawValue != "Female" {
                         HStack{
                             Spacer()
@@ -101,19 +105,19 @@ struct BodyFatView: View {
                         Spacer()
                     }
                     Spacer()
-                    if bodyfat == 0.0 {
+                    if person.bodyfat == 0.0 {
                         HStack{
                             Text("Your Bodyfat %:")
-                            Text(String(bodyfat))
+                            Text(String(person.bodyfat))
                         }.hidden()
                     } else {
                         HStack{
                             Text("Your Bodyfat %:")
-                            Text(String(bodyfat)).foregroundColor(.black)
+                            Text(String(person.bodyfat)).foregroundColor(.black)
                         }
                     }
                     Spacer()
-                    Button(action: calculateBF) {
+                    Button(action: set_data) {
                         Text("Calculate")
                     }
                     .frame(width: 150, height: 50)
@@ -124,31 +128,28 @@ struct BodyFatView: View {
      
             }
                 
-        }.foregroundColor(.black)
+        }.foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             
     }
-    func calculateBF() -> Void {
-        var height = Double(height)
-        var weight = Double(weight)
-        var neck = Double(neck)
-        var waist = Double(waist)
-        var hip = Double(hip)
-        var gender = selectedGender.rawValue
-        var firstLog = 0.0
-        var secLog = log10(height!)
-        var bf = 0.0
-        if gender != "Male" {
-            firstLog = log10((waist! + hip!) - neck!)
-            bf = (495 / (1.29579 - (0.35004 * firstLog) + (0.22100 * secLog)) - 450)
-        } else{
-            firstLog = log10(waist! - neck!)
-            bf = (495 / (1.0324 - (0.19077 * firstLog) + (0.15456 * secLog)) - 450)
-        }
-        bodyfat = Rounder().roundToPlaces(value: bf, places: 2)
-        
+    
+    func set_data() {
+        person.weight = weight
+        person.height = height
+        person.neck = neck
+        person.waist = waist
+        person.hip = hip
+        person.gender = selectedGender.rawValue
+        calc()
     }
+    func calc() {
+        person.calculateBF()
+    }
+    
 }
+
 
 #Preview {
     BodyFatView()
+        .environmentObject(Person())
+        
 }

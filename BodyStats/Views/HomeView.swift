@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var person: Person
     var body: some View {
         ZStack {
             LinearGradient(colors: [.yellow, .white], startPoint: .topLeading, endPoint: .bottom).ignoresSafeArea()
@@ -20,11 +21,11 @@ struct HomeView: View {
                 VStack{
                     HStack{
                         Text("current BMI:")
-                        Text(String(BMI().bmi))
+                        Text(String(person.bmi))
                     }
                     HStack{
                         Text("current BF%:")
-                        Text(String(BF().bodyfat))
+                        Text(String(person.bodyfat))
                     }
                     Spacer()
                 }
@@ -39,4 +40,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        .environmentObject(Person())
 }
