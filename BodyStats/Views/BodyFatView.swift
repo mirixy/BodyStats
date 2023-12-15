@@ -10,7 +10,6 @@ import SwiftUI
 struct BodyFatView: View {
     @EnvironmentObject var person: Person
     
-    @State var height = ""
     @State var weight = ""
     @State var neck = ""
     @State var waist = ""
@@ -31,11 +30,11 @@ struct BodyFatView: View {
             LinearGradient(colors: [.orange, .white], startPoint: .topLeading, endPoint: .bottomLeading)
                 .ignoresSafeArea()
             VStack{
-                Text("Body Fat")
+                Text("Body Fat & BMI")
                     .font(.largeTitle)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                Text("Data")
+                Text("Caculator")
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .foregroundColor(.gray)
@@ -50,15 +49,6 @@ struct BodyFatView: View {
                     Spacer()
                 }
                 VStack{
-                    HStack{
-                        Spacer()
-                        Text("Height:")
-                        TextField("180", text: $height)
-                            .frame(width: 50.0).background(.white)
-                            .foregroundColor(.black)
-                        Text("cm")
-                        Spacer()
-                    }
                     HStack{
                         Spacer()
                         Text("Neck:")
@@ -135,7 +125,6 @@ struct BodyFatView: View {
     
     func set_data() {
         person.weight = weight
-        person.height = height
         person.neck = neck
         person.waist = waist
         person.hip = hip
@@ -145,6 +134,7 @@ struct BodyFatView: View {
     }
     func calc() {
         person.calculateBF()
+        person.calculate(weight: person.weight)
     }
     
 }

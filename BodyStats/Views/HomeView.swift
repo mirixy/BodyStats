@@ -27,6 +27,10 @@ struct HomeView: View {
                         Text("current BF%:")
                         Text(String(person.bodyfat))
                     }
+                    HStack{
+                        Text("Weight lost:")
+                        Text(String(person.lost))
+                    }
                     Spacer()
                 }
             }

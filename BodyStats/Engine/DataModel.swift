@@ -18,6 +18,8 @@ class Person: ObservableObject {
     @Published var gender: String = ""
     @Published var bmi: Double = 0.0
     @Published var bodyfat: Double = 0.0
+    @Published var start_weight: String = ""
+    @Published var lost:Double = 0.0
     
     // Body Fat  Specefic
     @Published var neck: String = ""
@@ -43,13 +45,14 @@ class Person: ObservableObject {
     }
     
     // Calculate BMI
-    func calculate(weight:String, height:String) {
+    func calculate(weight:String) {
         let w = Double(weight)
-        var h = Double(height)
+        var h = Double(self.height)
         h = h! / 100
         var bm = (w! / (h! * h!))
         bm = roundToPlaces(value: bm, places: 2)
         self.bmi = bm
+        self.calc_loss()
         print(bm)
         
         
@@ -84,9 +87,22 @@ class Person: ObservableObject {
             bf = (495 / (1.0324 - (0.19077 * firstLog) + (0.15456 * secLog)) - 450)
         }
         self.bodyfat = roundToPlaces(value: bf, places: 2)
+        self.calc_loss()
         print("Here: " , self.isWomen , bf)
         
         
+    }
+    func save_person(name:String, height:String, weight:String) {
+        self.name = name
+        self.height = height
+        self.start_weight = weight
+    }
+    
+    func calc_loss() {
+        var weight = Double(self.weight)
+        var start = Double(self.start_weight)
+        var lost = (weight ?? 0) - (start ?? 0)
+        self.lost = roundToPlaces(value: lost, places: 2)
     }
 }
 
